@@ -1,6 +1,11 @@
 
 # Description
 
+npx hardhat deploy --network WanchainTestnet 失败， 不确定原因。
+请使用：
+npx hardhat run scripts/deploy.js --network WanchainTestnet
+
+
 This repository contains the tools and resources for working with [ERC-4337](https://eips.ethereum.org/EIPS/eip-4337) Account Abstraction smart contracts. This includes the code for the singleton `EntryPoint` contract that is deployed by our team on most EVM-compatible networks.
 
 # Overview

@@ -58,7 +58,7 @@ contract EntryPoint is IEntryPoint, StakeManager, NonceManager, ERC165, EIP712 {
     string constant internal DOMAIN_NAME = "ERC4337";
     string constant internal DOMAIN_VERSION = "1";
 
-    bytes32 transient private currentUserOpHash;
+    bytes32 private currentUserOpHash;
 
     error Reentrancy();
 

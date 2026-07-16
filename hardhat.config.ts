@@ -30,7 +30,7 @@ function getNetwork (name: string): { url: string, accounts: { mnemonic: string 
 const optimizedCompilerSettings = {
   version: '0.8.28',
   settings: {
-    evmVersion: 'cancun',
+    evmVersion: 'london',
     optimizer: { enabled: true, runs: 1000000 },
     viaIR: true
   }
@@ -44,7 +44,7 @@ const config: HardhatUserConfig = {
     compilers: [{
       version: '0.8.28',
       settings: {
-        evmVersion: 'cancun',
+        evmVersion: 'london',
         viaIR: true,
         optimizer: { enabled: true, runs: 1000000 }
       }
@@ -57,6 +57,12 @@ const config: HardhatUserConfig = {
   },
   networks: {
     dev: { url: 'http://localhost:8545' },
+    WanchainTestnet:{
+      url: "http://192.168.1.179:8545",
+      chainId: 999,
+      gasPrice: 3e9,
+      accounts: ["0x949077a1ad13215b0436b748f6afb07b837aebbe1038bc1e48ebdac49782f8b0"]
+    },
     // github action starts localgeth service, for gas calculations
     localgeth: { url: 'http://localgeth:8545' },
     sepolia: getNetwork('sepolia'),
